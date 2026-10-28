@@ -1,0 +1,124 @@
+{
+  "dataset": "SynthAV (synthetic, generated in src/fnetrepro/data.py)",
+  "config": {
+    "epochs": 30,
+    "d_model": 64,
+    "n_intra": 2,
+    "n_inter": 2,
+    "seed": 7,
+    "device": "cpu"
+  },
+  "splits": {
+    "train": 728,
+    "val": 240,
+    "test": 300
+  },
+  "models": {
+    "full": {
+      "use_inter": true,
+      "n_params": 327553,
+      "best_val_auc": 0.8360416666666667,
+      "train_seconds": 98.6,
+      "test": {
+        "n": 300,
+        "n_real": 150,
+        "n_fake": 150,
+        "accuracy": 0.7266666666666667,
+        "n_correct": 218,
+        "auc": 0.8093333333333332,
+        "confusion": {
+          "tn": 107,
+          "fp": 43,
+          "fn": 39,
+          "tp": 111
+        },
+        "per_subtype": {
+          "real": {
+            "n": 150,
+            "correct": 107,
+            "accuracy": 0.7133333333333334
+          },
+          "fake_audio": {
+            "n": 42,
+            "correct": 42,
+            "accuracy": 1.0
+          },
+          "fake_video": {
+            "n": 36,
+            "correct": 11,
+            "accuracy": 0.3055555555555556
+          },
+          "fake_sync": {
+            "n": 36,
+            "correct": 22,
+            "accuracy": 0.6111111111111112
+          },
+          "fake_both": {
+            "n": 36,
+            "correct": 36,
+            "accuracy": 1.0
+          }
+        },
+        "fake_subtypes": [
+          "fake_audio",
+          "fake_video",
+          "fake_sync",
+          "fake_both"
+        ]
+      }
+    },
+    "ablation_no_inter": {
+      "use_inter": false,
+      "n_params": 327553,
+      "best_val_auc": 0.803611111111111,
+      "train_seconds": 76.1,
+      "test": {
+        "n": 300,
+        "n_real": 150,
+        "n_fake": 150,
+        "accuracy": 0.7566666666666667,
+        "n_correct": 227,
+        "auc": 0.8129333333333334,
+        "confusion": {
+          "tn": 130,
+          "fp": 20,
+          "fn": 53,
+          "tp": 97
+        },
+        "per_subtype": {
+          "real": {
+            "n": 150,
+            "correct": 130,
+            "accuracy": 0.8666666666666667
+          },
+          "fake_audio": {
+            "n": 42,
+            "correct": 42,
+            "accuracy": 1.0
+          },
+          "fake_video": {
+            "n": 36,
+            "correct": 9,
+            "accuracy": 0.25
+          },
+          "fake_sync": {
+            "n": 36,
+            "correct": 10,
+            "accuracy": 0.2777777777777778
+          },
+          "fake_both": {
+            "n": 36,
+            "correct": 36,
+            "accuracy": 1.0
+          }
+        },
+        "fake_subtypes": [
+          "fake_audio",
+          "fake_video",
+          "fake_sync",
+          "fake_both"
+        ]
+      }
+    }
+  }
+}

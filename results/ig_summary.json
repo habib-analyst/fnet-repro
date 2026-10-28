@@ -1,0 +1,64 @@
+{
+  "demos": [
+    {
+      "test_index": 7,
+      "subtype": "fake_sync",
+      "logit": 1.6197034120559692,
+      "pred": "fake",
+      "ig_steps": 48,
+      "completeness": {
+        "sum_attributions": 0.4470755457878113,
+        "logit_minus_baseline": 0.4262256622314453,
+        "abs_error": 0.020849883556365967
+      },
+      "modality_share_abs_attr": {
+        "audio": 0.04601677134633064,
+        "visual": 0.9539832472801208
+      },
+      "top_mel_bins": [
+        19,
+        18,
+        21,
+        17,
+        13
+      ],
+      "top_frames": [
+        0,
+        12,
+        3,
+        1,
+        14
+      ],
+      "mouth_share_of_visual_abs_attr": 0.17776715755462646
+    },
+    {
+      "test_index": 1,
+      "subtype": "fake_audio",
+      "logit": 6.401411056518555,
+      "pred": "fake",
+      "ig_steps": 48,
+      "completeness": {
+        "sum_attributions": 5.213809967041016
+      },
+      "modality_share_abs_attr": {
+        "audio": 0.050809863954782486,
+        "visual": 0.9491901397705078
+      },
+      "top_mel_bins": [
+        10,
+        4,
+        18,
+        16,
+        30
+      ],
+      "top_frames": [
+        0,
+        5,
+        1,
+        7,
+        15
+      ],
+      "mouth_share_of_visual_abs_attr": 0.2103653848171234
+    }
+  ]
+}
